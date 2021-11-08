@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/subjects/ss",
+    "pages/subjects/jingguan/jingguan",
+    "pages/subjects/jixie/jixie",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundColor": "#fbbd08",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbbd08",
+    "navigationBarTitleText": "二手书",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home_on.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabbar/my.png",
+        "selectedIconPath": "/images/tabbar/my_on.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,71 @@
+<wxs src="../../common.wxs" module="morejs" />
+
+<view class="top_box">
+      <view class="search_box" bindtap="search">
+            <image class="search_ico" src="/images/search.png"></image>
+            <view class="search_text">搜索想要的书籍，例如：机械设计</view>
+      </view>
+</view>
+
+
+<!--分类导航-->
+
+<view class="kind_contain">
+      <view class="nav-item {{-2==collegeCur?'tab-on':''}}" bindtap="selectAll">
+            <view class="nav-text">全部</view>
+      </view>
+      <scroll-view scroll-x class="nav" scroll-with-animation scroll-left="{{scrollLeft}}rpx">
+            <view class="nav-item" wx:for="{{college}}" wx:key="id" bindtap="collegeSelect" data-id="{{index}}">
+                  <navigator class="nav-text {{index==collegeCur+1?'tab-on':''}}" 
+                  url="/pages/subjects/{{item._name}}/{{item._name}}">
+                        <view class="nav-text {{index==collegeCur+1?'tab-on':''}}">{{item.name}}</view>
+                  </navigator>
+            </view>
+      </scroll-view>
+      <view class="kind_img">
+            <image lazy-load src="{{'/images/l_right.png'}}" />
+      </view>
+</view>
+
+
+
+<!--无内容显示-->
+<view class="nocontent" wx:if="{{bookNum==0}}">
+      <image lazy-load src="/images/blank.png"></image>
+      <view class="blank_text">这里空空如也~</view>
+</view>
+
+
+<view class="oneLine">
+      <view class="good">
+            <navigator class="good" url='/pages/details/details'>
+                  <image class="picture" src="{{good.picture}}"></image>
+                  <title class="price">{{good.price}}</title>
+            </navigator>
+      </view>
+      <view class="good">
+            <navigator class="good" url='/pages/details/details'>
+                  <image class="picture" src="{{good.picture}}"></image>
+                  <title class="price">{{good.price}}</title>
+            </navigator>
+      </view>
+</view>
+
+<view class="oneLine">
+      <view class="good">
+            <navigator class="good" url='/pages/details/details'>
+                  <image class="picture" src="{{good.picture}}"></image>
+                  <title class="price">{{good.price}}</title>
+            </navigator>
+      </view>
+      <view class="good">
+            <navigator class="good" url='/pages/details/details'>
+                  <image class="picture" src="{{good.picture}}"></image>
+                  <title class="price">{{good.price}}</title>
+            </navigator>
+      </view>
+</view>
+
+
+
+<tips />
